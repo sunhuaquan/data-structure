@@ -2,58 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18c9646c-e2ac-4005-8b90-4fb88a8fb2d1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sun/util/graph/LazyPrimMST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sun/util/graph/LazyPrimMST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/helper/FileOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/AddTwoNumbers$ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/AddTwoNumbers$Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/AddTwoNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/KthLargest$MinHeap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/KthLargest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumArray$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumArray$Merger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumArray$SegmentTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumJewelsInStones$Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/NumJewelsInStones.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/Solution$ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/Solution$Pair.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/Solution$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/TwoSum$Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/test/leetcode/TwoSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/ArrayList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/ArrayList$Itr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/ArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/ArrayQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/ArrayStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/BST$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/BST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/BSTSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/LinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/LinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/LinkedListMap$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/LinkedListMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/LinkedListSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/Map.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/MaxHeap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/Merger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/MinHeap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/PriorityQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/Queue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/SegmentTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/Set.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/Component.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/DenseGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/LazyPrimMST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/Path.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/ReadGraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/ShortestPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sun/util/graph/SparseGraph.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,7 +18,7 @@
       <file leaf-file-name="GraphTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sun/test/GraphTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="1290">
               <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,8 +30,8 @@
       <file leaf-file-name="LazyPrimMST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sun/util/graph/LazyPrimMST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +42,7 @@
       <file leaf-file-name="ReadGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sun/util/graph/ReadGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="180">
               <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
@@ -225,6 +174,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -296,9 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,11 +436,12 @@
       <workItem from="1542030215462" duration="102000" />
       <workItem from="1542030338180" duration="494000" />
       <workItem from="1542031323756" duration="431000" />
+      <workItem from="1542032058650" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138153000" />
+    <option name="totallyTimeSpent" value="138187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -510,7 +460,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18240343" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18508583" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -520,11 +470,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6364653" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32997763" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.53355706" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32997763" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -798,9 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,9 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,13 +793,7 @@
     <entry file="file://$PROJECT_DIR$/data-structure.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -882,14 +820,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sun/util/graph/ReadGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="180">
           <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sun/test/GraphTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="1290">
           <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -899,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sun/util/graph/LazyPrimMST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

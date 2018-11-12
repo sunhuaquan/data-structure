@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author sunhuaquan
  * @Title: LazyPrimMST
- * @Description: TODO
+ * @Description: LazyPrimMST算法
  * @date 2018/11/1011:44
  */
 public class LazyPrimMST<T extends Comparable<T>> {

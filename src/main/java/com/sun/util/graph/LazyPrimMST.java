@@ -49,11 +49,9 @@ public class LazyPrimMST<T extends Comparable<T>> {
                 minHeap.enqueue(edge);
         }
     }
-
     public List<Edge> getMinMst() {
         return new ArrayList<>(list);
     }
-
     public double getMstWeight() {
         return mstWeight;
     }

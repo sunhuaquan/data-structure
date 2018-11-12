@@ -40,7 +40,6 @@ public class LazyPrimMST<T extends Comparable<T>> {
             mstWeight += edge.getWeight();
         }
     }
-
     private void visit(int v) {
         marked[v] = true;
         List<Edge> edges = g.getEdges(v);

@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * @author sunhuaquan
  * @Title: LazyPrimMST
- * @ProjectName test-demo
  * @Description: TODO
  * @date 2018/11/1011:44
  */

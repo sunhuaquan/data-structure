@@ -14,13 +14,9 @@ import java.util.List;
 public class LazyPrimMST<T extends Comparable<T>> {
 
     private Graph g;
-
     private MinHeap<Edge> minHeap;
-
     private boolean[] marked;
-
     private final List<Edge> list = new ArrayList<>();
-
     private double mstWeight;
 
     public LazyPrimMST(Graph g) {
@@ -40,7 +36,6 @@ public class LazyPrimMST<T extends Comparable<T>> {
             else
                 visit(min.w());
         }
-
         for (Edge edge : list) {
             mstWeight += edge.getWeight();
         }

@@ -1,0 +1,53 @@
+package com.sun.test;
+
+import com.sun.util.graph.*;
+
+import java.util.List;
+
+/**
+ * @Description:
+ * @author: sunhuaquan
+ * @Date: 2018-11-08 13:42
+ */
+public class GraphTest {
+
+
+    public static void main(String[] ss) {
+
+        String filename = "testG1.txt";
+        Graph g1 = new DenseGraph(8, false);
+        ReadGraph readGraph1 = new ReadGraph(g1, filename);
+        g1.show();
+
+        List<Edge> edges = g1.getEdges(0);
+
+        System.out.print("\n");
+        System.out.println(edges);
+
+        Component component = new Component(g1);
+        List dfs = component.getDfs();
+        System.out.println(dfs);
+
+        System.out.println(component.count());
+
+        System.out.println(component.isConnected(0, 1));
+
+        Path path = new Path(g1, 0);
+
+        path.showPath(6);
+
+        System.out.print("\n");
+
+        ShortestPath shortestPath = new ShortestPath(g1, 0);
+
+        shortestPath.showPath(6);
+
+
+        LazyPrimMST<Double> mst = new LazyPrimMST<>(g1);
+
+        System.out.print("\n");
+        System.out.println("mst:" + mst.getMinMst());
+
+        System.out.println("mstweight:" + mst.getMstWeight());
+    }
+}

@@ -6,7 +6,7 @@ import com.sun.util.IndexMaxHeap;
  * @author sunhuaquan
  * @Title: IndexMaxHeapTest
  * @ProjectName data-structure
- * @Description: TODO
+ * @Description: test
  * @date 2018/11/1422:00
  */
 public class IndexMaxHeapTest {

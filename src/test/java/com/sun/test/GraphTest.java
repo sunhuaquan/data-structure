@@ -43,11 +43,13 @@ public class GraphTest {
         shortestPath.showPath(6);
 
 
-        LazyPrimMST<Double> mst = new LazyPrimMST<>(g1);
+        LazyPrimMST2<Double> mst = new LazyPrimMST2<>(g1);
 
         System.out.print("\n");
-        System.out.println("mst:" + mst.getMinMst());
+        System.out.println("mst:" + mst.getMstWeight());
 
-        System.out.println("mstweight:" + mst.getMstWeight());
+        System.out.println("mstweight:" + mst.getMstEdges());
+
+
     }
 }

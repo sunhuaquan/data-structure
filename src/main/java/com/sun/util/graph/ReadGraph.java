@@ -1,14 +1,15 @@
 package com.sun.util.graph;
 
-import com.sun.util.graph.Graph;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
 public class ReadGraph {
 
     public ReadGraph(Graph g, String filename) {
         try {
-            File file = new File("E:/java/data-structure/src/" + filename);
+            File file = new File("E:/work/data-structure/src/" + filename);
             FileInputStream fis = new FileInputStream(file);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fis));
             String line = bufferedReader.readLine();

@@ -9,7 +9,10 @@ package com.sun.util.graph;
  */
 public class PrimMST {
 
+    public PrimMST(Graph g) {
 
+
+    }
 
 
 }

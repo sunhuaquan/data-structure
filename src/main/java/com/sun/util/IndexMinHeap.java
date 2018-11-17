@@ -90,7 +90,7 @@ public class IndexMinHeap<E extends Comparable<E>> {
         return ret;
     }
 
-    int extractMinIndex() {
+    public int extractMinIndex() {
         assert (count > 0);
         int ret = indexes[1] - 1;
         swap(indexes, 1, count);
@@ -121,7 +121,7 @@ public class IndexMinHeap<E extends Comparable<E>> {
         return data[index + 1];
     }
 
-    void change(int index, E newItem) {
+    public void change(int index, E newItem) {
 
         assert (contain(index));
         index += 1;

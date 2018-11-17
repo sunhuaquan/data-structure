@@ -1,5 +1,6 @@
 package com.sun.test;
 
+import com.sun.jmx.snmp.internal.SnmpSubSystem;
 import com.sun.util.graph.*;
 
 import java.util.List;
@@ -46,10 +47,15 @@ public class GraphTest {
         LazyPrimMST2<Double> mst = new LazyPrimMST2<>(g1);
 
         System.out.print("\n");
-        System.out.println("mst:" + mst.getMstWeight());
+        System.out.println("mst:" + mst.getMstEdges());
 
-        System.out.println("mstweight:" + mst.getMstEdges());
+        System.out.println("mstweight:" + mst.getMstWeight());
 
+        
+        PrimMST primMST=new PrimMST(g1);
+        List<Edge> mst1 = primMST.getMst();
+        System.out.println("primMST:"+mst1);
+        System.out.println("primMST:weight:"+primMST.getMstWeight());
 
     }
 }

@@ -57,5 +57,11 @@ public class GraphTest {
         System.out.println("primMST:"+mst1);
         System.out.println("primMST:weight:"+primMST.getMstWeight());
 
+
+        KruskalMST kruskalMST=new KruskalMST(g1);
+
+        List<Edge> kruskal = kruskalMST.getMst();
+        System.out.println("KruskalMST:"+kruskal);
+        System.out.println("KruskalMST:weight:"+kruskalMST.getMstWeight());
     }
 }

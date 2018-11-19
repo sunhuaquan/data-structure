@@ -63,5 +63,8 @@ public class GraphTest {
         List<Edge> kruskal = kruskalMST.getMst();
         System.out.println("KruskalMST:"+kruskal);
         System.out.println("KruskalMST:weight:"+kruskalMST.getMstWeight());
+
+
+
     }
 }

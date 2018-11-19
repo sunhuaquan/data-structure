@@ -111,7 +111,7 @@ public class IndexMinHeap<E extends Comparable<E>> {
         return indexes[1] - 1;
     }
 
-    private boolean contain(int index) {
+    public boolean contain(int index) {
 
         return reverse[index + 1] != 0;
     }

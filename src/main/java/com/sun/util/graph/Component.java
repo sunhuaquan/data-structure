@@ -54,8 +54,9 @@ public class Component {
 
     public List getDfs() {
         List<Integer> result = new ArrayList<Integer>();
-        for (Integer item : list)
+        for (Integer item : list) {
             result.add(item);
+        }
         return result;
     }
 

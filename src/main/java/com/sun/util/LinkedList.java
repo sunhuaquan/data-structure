@@ -45,6 +45,7 @@ public class LinkedList<E> implements List<E> {
         size = 0;
     }
 
+    @Override
     public void add(E e) {
         Node<E> node = dummyNode;
         while (node.next != null) {
@@ -54,10 +55,12 @@ public class LinkedList<E> implements List<E> {
         size++;
     }
 
+    @Override
     public void add(int index, E e) {
 
-        if (index < 0 || index > size)
+        if (index < 0 || index > size) {
             throw new IllegalArgumentException("index is illegal");
+        }
         Node<E> node = dummyNode;
         int i = 0;
         while (i < index) {
@@ -70,6 +73,7 @@ public class LinkedList<E> implements List<E> {
         size++;
     }
 
+    @Override
     public boolean addAll(Collection<? extends E> collection) {
 
         Iterator<? extends E> iterator = collection.iterator();
@@ -79,6 +83,7 @@ public class LinkedList<E> implements List<E> {
         return true;
     }
 
+    @Override
     public boolean contains(E e) {
         Node<E> node = dummyNode.next;
         while (node != null) {
@@ -90,9 +95,11 @@ public class LinkedList<E> implements List<E> {
         return false;
     }
 
+    @Override
     public E get(int index) {
-        if (index < 0 || index > size - 1)
+        if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("index is illegal");
+        }
         int i = 0;
         Node<E> node = dummyNode.next;
         while (i < index) {
@@ -102,14 +109,16 @@ public class LinkedList<E> implements List<E> {
         return node.e;
     }
 
+    @Override
     public boolean isEmpty() {
         return size > 0;
     }
 
+    @Override
     public E remove(int index) {
-        if (index < 0 || index > size - 1)
+        if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("index is illegal");
-
+        }
         Node<E> prvNode = dummyNode;
         int i = 0;
         while (i < index) {
@@ -122,9 +131,11 @@ public class LinkedList<E> implements List<E> {
         return delNode.e;
     }
 
+    @Override
     public E set(int index, E e) {
-        if (index < 0 || index > size - 1)
+        if (index < 0 || index > size - 1) {
             throw new IllegalArgumentException("index is illegal");
+        }
         int i = 0;
         Node<E> node = dummyNode.next;
         while (i < index) {
@@ -136,41 +147,50 @@ public class LinkedList<E> implements List<E> {
         return result;
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public void addFirst(E e) {
 
         add(0, e);
     }
 
+    @Override
     public void addLast(E e) {
 
         add(size, e);
     }
 
+    @Override
     public E getFirst() {
 
         return get(0);
     }
 
+    @Override
     public E getLast() {
         return get(size - 1);
     }
 
+    @Override
     public E removeFirst() {
         return remove(0);
     }
 
+    @Override
     public E removeLast() {
         return remove(size - 1);
     }
 
+    @Override
     public int getCapacity() {
         return Integer.MAX_VALUE;
     }
 
+    @Override
     public int find(E e) {
         return 0;
     }

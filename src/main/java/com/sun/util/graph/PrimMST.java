@@ -44,8 +44,9 @@ public class PrimMST {
         for (Edge edge : edges) {
 
             int w = edge.other(v);
-            if (marked[w])
+            if (marked[w]) {
                 continue;
+            }
             if (edgeTo[w] == null) {
                 edgeTo[w] = edge;
                 indexMinHeap.insert(w, edge);

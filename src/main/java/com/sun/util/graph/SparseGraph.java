@@ -1,8 +1,5 @@
 package com.sun.util.graph;
 
-import com.sun.util.graph.Edge;
-import com.sun.util.graph.Graph;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +26,7 @@ public class SparseGraph implements Graph {
         }
     }
 
+    @Override
     public void addEdge(int v, int w, double weight) {
         if (v < 0 && v >= n) {
             throw new IllegalArgumentException("v is illegal");
@@ -38,11 +36,13 @@ public class SparseGraph implements Graph {
         }
 
         g.get(v).add(new Edge(v, w, weight));
-        if (v != w && !directed)
+        if (v != w && !directed) {
             g.get(w).add(new Edge(w, v, weight));
+        }
         m++;
     }
 
+    @Override
     public boolean hasEdge(int v, int w) {
         if (v < 0 && v >= n) {
             throw new IllegalArgumentException("v is illegal");
@@ -50,20 +50,25 @@ public class SparseGraph implements Graph {
         if (w < 0 && w >= n) {
             throw new IllegalArgumentException("w is illegal");
         }
-        for (int i = 0; i < g.get(v).size(); i++)
-            if (g.get(v).get(i).other(v) == w)
+        for (int i = 0; i < g.get(v).size(); i++) {
+            if (g.get(v).get(i).other(v) == w) {
                 return true;
+            }
+        }
         return false;
     }
 
+    @Override
     public int getVertexCount() {
         return n;
     }
 
+    @Override
     public int getEdgeCount() {
         return m;
     }
 
+    @Override
     public void show() {
         for (int i = 0; i < g.size(); i++) {
             List<Edge> list = g.get(i);
@@ -84,6 +89,7 @@ public class SparseGraph implements Graph {
      * @param v
      * @return
      */
+    @Override
     public List<Edge> getEdges(int v) {
         if (v < 0 && v >= n) {
             throw new IllegalArgumentException("v is illegal");

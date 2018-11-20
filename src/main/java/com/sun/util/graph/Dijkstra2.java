@@ -10,7 +10,7 @@ import java.util.Stack;
  * @author sunhuaquan
  * @Title: Dijkstra2
  * @ProjectName data-structure
- * @Description: TODO
+ * @Description: Dijkstra算法2求最小路径
  * @date 2018/11/1921:50
  */
 public class Dijkstra2 {
@@ -38,8 +38,11 @@ public class Dijkstra2 {
             List<Edge> edges = g.getEdges(v);
             for (Edge edge : edges) {
                 int w = edge.other(v);
-                if (marked[w]) continue;
-                if (from[w] == null) {//没有路径，则当前路径就是最小路径
+                if (marked[w]){
+                    continue;
+                }
+                //没有路径，则当前路径就是最小路径
+                if (from[w] == null) {
                     from[w] = edge;
                     distTo[w] = from[w].getWeight() + distTo[v];
                     ipq.insert(w, edge.getWeight());

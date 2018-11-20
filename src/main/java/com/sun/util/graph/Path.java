@@ -77,8 +77,9 @@ public class Path {
         path(w, list);
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
-            if (i != list.size() - 1)
+            if (i != list.size() - 1) {
                 System.out.print("->");
+            }
         }
     }
 }

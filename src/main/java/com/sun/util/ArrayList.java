@@ -60,10 +60,12 @@ public class ArrayList<E> implements List<E> {
         }
     }
 
+    @Override
     public void add(int index, E e) {
 
-        if (index < 0 || index > size)
+        if (index < 0 || index > size) {
             throw new IllegalArgumentException("index is illegal");
+        }
         if (isFull()) {
             resize(capacity * 2);
         }
@@ -75,6 +77,7 @@ public class ArrayList<E> implements List<E> {
 
     }
 
+    @Override
     public boolean addAll(Collection<? extends E> collection) {
         Iterator<? extends E> iterator = collection.iterator();
         while (iterator.hasNext()) {
@@ -83,6 +86,7 @@ public class ArrayList<E> implements List<E> {
         return true;
     }
 
+    @Override
     public boolean contains(E e) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(e)) {
@@ -92,19 +96,24 @@ public class ArrayList<E> implements List<E> {
         return false;
     }
 
+    @Override
     public E get(int index) {
-        if (!indexIsIllegal(index))
+        if (!indexIsIllegal(index)) {
             throw new IllegalArgumentException("index is illegal");
+        }
         return data[index];
     }
 
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    @Override
     public E remove(int index) {
-        if (!indexIsIllegal(index))
+        if (!indexIsIllegal(index)) {
             throw new IllegalArgumentException("index is illegal");
+        }
         E result = data[index];
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
@@ -114,56 +123,71 @@ public class ArrayList<E> implements List<E> {
         return result;
     }
 
+    @Override
     public E set(int index, E e) {
-        if (!indexIsIllegal(index))
+        if (!indexIsIllegal(index)) {
             throw new IllegalArgumentException("index is illegal");
+        }
         E result = data[index];
         data[index] = e;
         return result;
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public void addFirst(E e) {
 
         add(0, e);
     }
 
+    @Override
     public void addLast(E e) {
 
         add(size, e);
     }
 
+    @Override
     public E getFirst() {
-        if (isEmpty())
+        if (isEmpty()) {
             throw new RuntimeException("ArrayList is empty");
+        }
         return get(0);
     }
 
+    @Override
     public E getLast() {
-        if (isEmpty())
+        if (isEmpty()) {
             throw new RuntimeException("ArrayList is empty");
+        }
         return get(size - 1);
     }
 
+    @Override
     public E removeFirst() {
-        if (isEmpty())
+        if (isEmpty()) {
             throw new RuntimeException("ArrayList is empty");
+        }
         return remove(0);
     }
 
+    @Override
     public E removeLast() {
-        if (isEmpty())
+        if (isEmpty()) {
             throw new RuntimeException("ArrayList is empty");
+        }
         return remove(size - 1);
     }
 
+    @Override
     public int getCapacity() {
         return capacity;
     }
 
+    @Override
     public int find(E e) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(e)) {

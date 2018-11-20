@@ -14,8 +14,9 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public MaxHeap(E[] arr) {
         data = new ArrayList<>(arr);
-        for (int i = parent(arr.length - 1); i >= 0; i--)
+        for (int i = parent(arr.length - 1); i >= 0; i--) {
             siftDown(i, data.get(i));
+        }
     }
 
     public boolean isEmpty() {
@@ -29,8 +30,9 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public int parent(int index) {
 
-        if (index == 0)
+        if (index == 0) {
             throw new IllegalArgumentException("index 0 have not parent");
+        }
         return (index - 1) / 2;
     }
 

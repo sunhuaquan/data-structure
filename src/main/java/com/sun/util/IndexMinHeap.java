@@ -8,9 +8,9 @@ import java.lang.reflect.Array;
  * @Date: 2018-11-15 10:08
  */
 public class IndexMinHeap<E extends Comparable<E>> {
-    private E[] data;//原始数据
-    private int[] indexes;//树中对应的索引
-    private int[] reverse;//
+    private E[] data;
+    private int[] indexes;
+    private int[] reverse;
     private int count;
     private int capacity;
 
@@ -34,12 +34,12 @@ public class IndexMinHeap<E extends Comparable<E>> {
 
         while (2 * k <= count) {
             int j = 2 * k;
-            if (j + 1 <= count && data[indexes[j]].compareTo(data[indexes[j + 1]]) > 0)
+            if (j + 1 <= count && data[indexes[j]].compareTo(data[indexes[j + 1]]) > 0) {
                 j += 1;
-
-            if (data[indexes[k]].compareTo(data[indexes[j]]) <= 0)
+            }
+            if (data[indexes[k]].compareTo(data[indexes[j]]) <= 0) {
                 break;
-
+            }
             swap(indexes, k, j);
             reverse[indexes[k]] = k;
             reverse[indexes[j]] = j;
@@ -53,9 +53,9 @@ public class IndexMinHeap<E extends Comparable<E>> {
         indexes = new int[capacity + 1];
         reverse = new int[capacity + 1];
 
-        for (int i = 0; i <= capacity; i++)
+        for (int i = 0; i <= capacity; i++) {
             reverse[i] = 0;
-
+        }
         count = 0;
         this.capacity = capacity;
     }

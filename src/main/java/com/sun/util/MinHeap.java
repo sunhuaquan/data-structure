@@ -29,8 +29,9 @@ public class MinHeap<E extends Comparable<E>> {
 
     public int parent(int index) {
 
-        if (index == 0)
+        if (index == 0) {
             throw new IllegalArgumentException("index is not illegal");
+        }
         return (index - 1) / 2;
     }
 
@@ -63,7 +64,9 @@ public class MinHeap<E extends Comparable<E>> {
     }
 
     public void siftDown(int index, E e) {
-        if (data.isEmpty()) return;
+        if (data.isEmpty()) {
+            return;
+        }
         while (leftChild(index) < data.size()) {
             int j = leftChild(index);
             if (j + 1 < data.size() && data.get(j + 1).compareTo(data.get(j)) < 0) {

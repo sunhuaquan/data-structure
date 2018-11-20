@@ -21,8 +21,9 @@ public class UnionFind2 implements UF {
     }
 
     private int find(int i) {
-        while (i != parent[i])
+        while (i != parent[i]) {
             i = parent[i];
+        }
         return i;
 
     }
@@ -41,8 +42,9 @@ public class UnionFind2 implements UF {
     public void unionElements(int p, int q) {
         int rootQ = find(q);
         int rootP = find(p);
-        if (rootP == rootQ)
+        if (rootP == rootQ) {
             return;
+        }
         parent[rootP] = rootQ;
     }
 }

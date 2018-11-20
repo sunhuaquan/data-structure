@@ -27,30 +27,36 @@ public class LazyPrimMST<T extends Comparable<T>> {
         mstWeight = 0;
         while (!minHeap.isEmpty()) {
             Edge min = minHeap.dequeue();
-            if (marked[min.v()] == marked[min.w()]) {//不是横切边
+            //不是横切边
+            if (marked[min.v()] == marked[min.w()]) {
                 continue;
             }
             list.add(min);
-            if (!marked[min.v()])
+            if (!marked[min.v()]) {
                 visit(min.v());
-            else
+            } else {
                 visit(min.w());
+            }
         }
         for (Edge edge : list) {
             mstWeight += edge.getWeight();
         }
     }
+
     private void visit(int v) {
         marked[v] = true;
         List<Edge> edges = g.getEdges(v);
         for (Edge edge : edges) {
-            if (!marked[edge.w()])
+            if (!marked[edge.w()]) {
                 minHeap.enqueue(edge);
+            }
         }
     }
+
     public List<Edge> getMinMst() {
         return new ArrayList<>(list);
     }
+
     public double getMstWeight() {
         return mstWeight;
     }

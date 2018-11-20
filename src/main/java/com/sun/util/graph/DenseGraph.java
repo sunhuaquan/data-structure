@@ -10,10 +10,22 @@ import java.util.List;
  */
 public class DenseGraph implements Graph {
 
-    private int n;//顶点数
-    private int m;//边数
-    private boolean directed;//是否有向
-    private Edge[][] g;//边集合
+    /**
+     * 顶点数
+     */
+    private int n;
+    /**
+     * 边数
+     */
+    private int m;
+    /**
+     * 是否有向
+     */
+    private boolean directed;
+    /**
+     * 边集合
+     */
+    private Edge[][] g;
 
     public DenseGraph(int n, boolean directed) {
         this.n = n;
@@ -22,6 +34,7 @@ public class DenseGraph implements Graph {
         g = new Edge[n][n];
     }
 
+    @Override
     public void addEdge(int v, int w, double weight) {
 
         if (v < 0 && v >= n) {
@@ -34,11 +47,13 @@ public class DenseGraph implements Graph {
             m--;
         }
         g[v][w] = new Edge(v, w, weight);
-        if (!directed)
+        if (!directed) {
             g[w][v] = new Edge(w, v, weight);
+        }
         m++;
     }
 
+    @Override
     public boolean hasEdge(int v, int w) {
         if (v < 0 && v >= n) {
             throw new IllegalArgumentException("v is illegal");
@@ -49,14 +64,17 @@ public class DenseGraph implements Graph {
         return g[v][w] != null;
     }
 
+    @Override
     public int getVertexCount() {
         return n;
     }
 
+    @Override
     public int getEdgeCount() {
         return m;
     }
 
+    @Override
     public void show() {
         for (int i = 0; i < g.length; i++) {
             for (int j = 0; j < g[i].length; j++) {
@@ -72,6 +90,7 @@ public class DenseGraph implements Graph {
      * @param v
      * @return
      */
+    @Override
     public List<Edge> getEdges(int v) {
         if (v < 0 && v >= n) {
             throw new IllegalArgumentException("v is illegal");

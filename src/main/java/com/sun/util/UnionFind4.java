@@ -12,8 +12,6 @@ public class UnionFind4 implements UF {
     private int[] parent;
     private int[] rank;
     private int size;
-
-
     public UnionFind4(int size) {
 
         this.size = size;
@@ -26,8 +24,9 @@ public class UnionFind4 implements UF {
     }
 
     private int find(int i) {
-        while (i != parent[i])
+        while (i != parent[i]) {
             i = parent[i];
+        }
         return i;
 
     }

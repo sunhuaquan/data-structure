@@ -26,8 +26,9 @@ public class UnionFind3 implements UF {
     }
 
     private int find(int i) {
-        while (i != parent[i])
+        while (i != parent[i]) {
             i = parent[i];
+        }
         return i;
 
     }

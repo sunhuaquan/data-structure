@@ -62,8 +62,9 @@ public class SegmentTree<E> {
     // 将index位置的值，更新为e
     public void set(int index, E e) {
 
-        if (index < 0 || index >= data.length)
+        if (index < 0 || index >= data.length) {
             throw new IllegalArgumentException("index is illegal");
+        }
         data[index] = e;
         set(0, 0, data.length - 1, index, e);
     }

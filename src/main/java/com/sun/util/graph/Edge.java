@@ -4,7 +4,7 @@ package com.sun.util.graph;
  * @author sunhuaquan
  * @Title: Edge
  * @ProjectName test-demo
- * @Description: TODO
+ * @Description: 图的边对象
  * @date 2018/11/1010:24
  */
 public class Edge implements Comparable<Edge> {
@@ -49,8 +49,12 @@ public class Edge implements Comparable<Edge> {
 
     @Override
     public int compareTo(Edge o) {
-        if (this.weight > o.weight) return 1;
-        if (this.weight == o.weight) return 0;
+        if (this.weight > o.weight) {
+            return 1;
+        }
+        if (this.weight == o.weight) {
+            return 0;
+        }
         return -1;
     }
 }

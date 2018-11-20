@@ -65,8 +65,9 @@ public class LinkedListMap<K, V> implements Map<K, V> {
     public void set(K key, V newValue) {
 
         Node node = getNode(key);
-        if (node == null)
+        if (node == null) {
             throw new RuntimeException(key + " is not exist in map");
+        }
         node.value = newValue;
     }
 

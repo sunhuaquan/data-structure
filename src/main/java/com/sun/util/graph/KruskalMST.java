@@ -40,20 +40,23 @@ public class KruskalMST {
         }
         while (!minHeap.isEmpty() && mst.size() < g.getVertexCount() - 1) {
             Edge minEdge = minHeap.dequeue();
-            if (uf.isConnected(minEdge.v(), minEdge.w()))
+            if (uf.isConnected(minEdge.v(), minEdge.w())) {
                 continue;
+            }
             mst.add(minEdge);
             uf.unionElements(minEdge.v(), minEdge.w());
         }
 
-        for (Edge edge : mst)
+        for (Edge edge : mst) {
             mstWeight += edge.getWeight();
+        }
 
     }
 
     public double getMstWeight() {
         return mstWeight;
     }
+
     public List<Edge> getMst() {
         return new ArrayList<>(mst);
     }

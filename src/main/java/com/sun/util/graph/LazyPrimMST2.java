@@ -48,8 +48,9 @@ public class LazyPrimMST2<T extends Comparable<T>> {
     private void visit(int v) {
         marked[v] = true;
         List<Edge> edges = g.getEdges(v);
-        for (Edge edge : edges)
+        for (Edge edge : edges) {
             minHeap.enqueue(edge);
+        }
     }
 
     public double getMstWeight() {

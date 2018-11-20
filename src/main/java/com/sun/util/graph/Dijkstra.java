@@ -17,9 +17,18 @@ public class Dijkstra {
 
     private Graph g;
     private int s;
-    private double[] distTo;//s到每个点的最短距离
-    private boolean[] marked;//是否标记过
-    private Edge[] from;//从哪里过来的
+    /**
+     * s到每个点的最短距离
+     */
+    private double[] distTo;
+    /**
+     * 是否标记过
+     */
+    private boolean[] marked;
+    /**
+     * 从哪里过来的
+     */
+    private Edge[] from;
 
     public Dijkstra(Graph g, int s) {
         this.g = g;
@@ -28,8 +37,8 @@ public class Dijkstra {
         marked = new boolean[g.getVertexCount()];
         from = new Edge[g.getVertexCount()];
         IndexMinHeap<Double> ipq = new IndexMinHeap<>(Double.class, g.getVertexCount());
-
-        distTo[s] = 0;//s到自己的路径最短路径为0；
+        //s到自己的路径最短路径为0;
+        distTo[s] = 0;
         ipq.insert(s, distTo[s]);
         marked[s] = true;
         while (!ipq.isEmpty()) {
@@ -38,14 +47,17 @@ public class Dijkstra {
             List<Edge> edges = g.getEdges(v);
             for (Edge edge : edges) {
                 int w = edge.other(v);
-                if (marked[w]) continue;
+                if (marked[w]) {
+                    continue;
+                }
                 if (from[w] == null || distTo[v] + edge.getWeight() < distTo[w]) {
                     distTo[w] = distTo[v] + edge.getWeight();
                     from[w] = edge;
-                    if (ipq.contain(w))
+                    if (ipq.contain(w)) {
                         ipq.change(w, distTo[w]);
-                    else
+                    } else {
                         ipq.insert(w, distTo[w]);
+                    }
                 }
             }
         }

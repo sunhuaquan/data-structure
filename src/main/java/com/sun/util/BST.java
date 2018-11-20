@@ -1,7 +1,6 @@
 package com.sun.util;
 
 
-
 public class BST<E extends Comparable<E>> {
 
     private Node root;
@@ -56,9 +55,15 @@ public class BST<E extends Comparable<E>> {
 
     public boolean contains(Node node, E e) {
 
-        if (node == null) return false;
-        if (node.e.compareTo(e) == 0) return true;
-        if (node.e.compareTo(e) < 0) return contains(node.right, e);
+        if (node == null) {
+            return false;
+        }
+        if (node.e.compareTo(e) == 0) {
+            return true;
+        }
+        if (node.e.compareTo(e) < 0) {
+            return contains(node.right, e);
+        }
         return contains(node.right, e);
 
     }
@@ -70,15 +75,21 @@ public class BST<E extends Comparable<E>> {
         return list;
     }
 
-    /*
-      前序遍历的规则：
-      （1）访问根节点
-      （2）前序遍历左子树
-      （3）前序遍历右子树
-       */
+
+    /**
+     * 前序遍历的规则：
+     * （1）访问根节点
+     * （2）前序遍历左子树
+     * （3）前序遍历右子树
+     *
+     * @param root
+     * @param list
+     */
     private void preOrder(Node root, List<E> list) {
 
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         list.add(root.e);
         preOrder(root.left, list);
         preOrder(root.right, list);
@@ -92,15 +103,17 @@ public class BST<E extends Comparable<E>> {
         return list;
     }
 
-    /*
-        中序遍历的规则：
-       （1）中序遍历左子树
-       （2）访问根节点
-       （3）中序遍历右子树
-        */
+    /**
+     * 中序遍历的规则：
+     * （1）中序遍历左子树
+     * （2）访问根节点
+     * （3）中序遍历右子树
+     */
     private void inOrder(Node root, List<E> list) {
 
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         inOrder(root.left, list);
         list.add(root.e);
         inOrder(root.right, list);
@@ -114,15 +127,17 @@ public class BST<E extends Comparable<E>> {
         return list;
     }
 
-    /*
-      后序遍历二叉树的规则：
-     （1）后序遍历左子树
-     （2）后序遍历右子树
-     （3）访问根节点
-      */
+    /**
+     * 后序遍历二叉树的规则：
+     * （1）后序遍历左子树
+     * （2）后序遍历右子树
+     * （3）访问根节点
+     */
     private void postOrder(Node root, List<E> list) {
 
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         postOrder(root.left, list);
         postOrder(root.right, list);
         list.add(root.e);
@@ -137,29 +152,15 @@ public class BST<E extends Comparable<E>> {
 
     private void levelOrder(Node root, List<List<E>> list, int level) {
 
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         if (list.size() - 1 < level) {
             list.add(new ArrayList<>());
         }
         list.get(level).add(root.e);
         levelOrder(root.left, list, level + 1);
         levelOrder(root.right, list, level + 1);
-    }
-
-    public void levelOrder2() {
-     /*   Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            Node top = queue.poll();
-            System.out.print(top.e + "-->");
-            if (top.left != null) {
-                queue.add(top.left);
-            }
-            if (top.right != null) {
-                queue.add(top.right);
-            }
-        }*/
     }
 
     public E max() {
@@ -169,7 +170,9 @@ public class BST<E extends Comparable<E>> {
 
     private Node max(Node root) {
 
-        if (root.right == null) return root;
+        if (root.right == null) {
+            return root;
+        }
         return max(root.right);
     }
 
@@ -180,7 +183,9 @@ public class BST<E extends Comparable<E>> {
 
     private Node min(Node root) {
 
-        if (root.left == null) return root;
+        if (root.left == null) {
+            return root;
+        }
         return min(root.left);
     }
 
@@ -227,7 +232,9 @@ public class BST<E extends Comparable<E>> {
 
     private Node remove(Node node, E e) {
 
-        if (node == null) return node;
+        if (node == null) {
+            return node;
+        }
         if (node.e.compareTo(e) > 0) {
             node.left = remove(node.left, e);
             return node;
@@ -235,22 +242,17 @@ public class BST<E extends Comparable<E>> {
             node.right = remove(node.right, e);
             return node;
         } else {//删除当前节点
-
             if (node.left == null) {
-                return node.right;//左节点为空，直接返回右节点
+                //左节点为空，直接返回右节点
+                return node.right;
             }
             if (node.right == null) {
-                return node.left;//右节点为空，直接返回左节点
+                //右节点为空，直接返回左节点
+                return node.left;
             } else {
-             /*   Node root = node.right;
-                while (root.left != null) {
-                    root = root.left;
-                }
-                root.left = node.left;
-                return node.right;*/
-
+                //这两行顺序不来调换
                 Node min = min(node.right);
-                min.right = removeMin(node.right);//这两行顺序不来调换
+                min.right = removeMin(node.right);
                 min.left = node.left;
                 node.right = node.left = null;
                 return min;
@@ -277,7 +279,13 @@ public class BST<E extends Comparable<E>> {
         return res.toString();
     }
 
-    // 生成以node为根节点，深度为depth的描述二叉树的字符串
+    /**
+     * 生成以node为根节点，深度为depth的描述二叉树的字符串
+     *
+     * @param node
+     * @param depth
+     * @param res
+     */
     private void generateString(Node node, int depth, StringBuilder res) {
 
         if (node == null) {
@@ -292,8 +300,9 @@ public class BST<E extends Comparable<E>> {
 
     private String generateDepthString(int depth) {
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < depth; i++)
+        for (int i = 0; i < depth; i++) {
             res.append("--");
+        }
         return res.toString();
     }
 }

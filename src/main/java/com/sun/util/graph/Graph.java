@@ -4,9 +4,7 @@ import java.util.List;
 
 /**
  * @Description:
- * @param: params
- * @return: returns
- * @author:
+ * @author: sunhuaquan
  * @Date: date
  */
 public interface Graph {
@@ -29,6 +27,7 @@ public interface Graph {
     boolean hasEdge(int v, int w);
 
     /**
+     * 获取订单数目
      *
      * @return
      */
@@ -36,17 +35,18 @@ public interface Graph {
 
     /**
      * 获取边数量
+     *
      * @return
      */
     int getEdgeCount();
 
     /**
-     * 展示自己1
+     * 展示自己
      */
     void show();
 
     /**
-     * 获取v的所有边
+     * 获取与顶点v相连的所有边
      *
      * @param v
      * @return

@@ -1,7 +1,7 @@
 package com.sun.util;
 
 
-public class BST<E extends Comparable<E>> {
+public class BST<E extends Comparable<E>> implements Tree<E> {
 
     private Node root;
     private int size;
@@ -11,19 +11,17 @@ public class BST<E extends Comparable<E>> {
         size = 0;
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
-    /**
-     * 添加元素
-     *
-     * @param e
-     */
+    @Override
     public void add(E e) {
         root = add(root, e);
     }
@@ -48,6 +46,7 @@ public class BST<E extends Comparable<E>> {
      * @param e
      * @return
      */
+    @Override
     public boolean contains(E e) {
 
         return contains(root, e);
@@ -163,6 +162,7 @@ public class BST<E extends Comparable<E>> {
         levelOrder(root.right, list, level + 1);
     }
 
+    @Override
     public E max() {
 
         return max(root).e;
@@ -176,6 +176,7 @@ public class BST<E extends Comparable<E>> {
         return max(root.right);
     }
 
+    @Override
     public E min() {
 
         return min(root).e;
@@ -225,6 +226,7 @@ public class BST<E extends Comparable<E>> {
         return root;
     }
 
+    @Override
     public void remove(E e) {
 
         root = remove(root, e);

@@ -38,7 +38,7 @@ public class Dijkstra2 {
             List<Edge> edges = g.getEdges(v);
             for (Edge edge : edges) {
                 int w = edge.other(v);
-                if (marked[w]){
+                if (marked[w]) {
                     continue;
                 }
                 //没有路径，则当前路径就是最小路径
@@ -67,8 +67,9 @@ public class Dijkstra2 {
             w = from[w].other(w);
         }
         List<Edge> edges = new ArrayList<>();
-        while (!stack.isEmpty())
+        while (!stack.isEmpty()) {
             edges.add(stack.pop());
+        }
         return edges;
 
     }

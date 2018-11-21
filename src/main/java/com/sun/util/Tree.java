@@ -58,4 +58,13 @@ public interface Tree<E> {
      * @param e
      */
     void remove(E e);
+
+    /**
+     * 树的中序遍历
+     *
+     * @return
+     */
+    List<E> inOrder();
+
+
 }

@@ -94,7 +94,7 @@ public class BST<E extends Comparable<E>> implements Tree<E> {
         preOrder(root.right, list);
     }
 
-
+    @Override
     public List<E> inOrder() {
 
         List<E> list = new ArrayList<>();
@@ -252,7 +252,7 @@ public class BST<E extends Comparable<E>> implements Tree<E> {
                 //右节点为空，直接返回左节点
                 return node.left;
             } else {
-                //这两行顺序不来调换
+                //这两行顺序不能调换
                 Node min = min(node.right);
                 min.right = removeMin(node.right);
                 min.left = node.left;

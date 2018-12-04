@@ -1,5 +1,6 @@
 package com.sun.test;
 
+import com.sun.algorithm.BubbleSort;
 import com.sun.algorithm.HeapSort;
 import com.sun.algorithm.MergeSort;
 import com.sun.algorithm.QuickSort;
@@ -14,7 +15,7 @@ public class SortTest {
 
     public static void main(String[] args) {
 
-        Sort sort = new HeapSort();
+        Sort sort = new BubbleSort();
         int[] arr = new int[]{10, 1, 20, 4, 5, 7, 2, 3};
         sort.sort(arr);
         for (int v : arr) {

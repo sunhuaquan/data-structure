@@ -72,15 +72,21 @@ public class MinHeap<E extends Comparable<E>> {
             if (j + 1 < data.size() && data.get(j + 1).compareTo(data.get(j)) < 0) {
                 j++;
             }
-            if (e.compareTo(data.get(j)) < 0)
+            if (e.compareTo(data.get(j)) < 0) {
                 break;
+            }
             data.set(index, data.get(j));
             index = j;
         }
         data.set(index, e);
     }
 
-    // 取出堆中的最大元素，并且替换成元素e
+    /**
+     * 取出堆中的最大元素，并且替换成元素e
+     *
+     * @param e
+     * @return
+     */
     public E replace(E e) {
         E ret = front();
         data.set(0, e);

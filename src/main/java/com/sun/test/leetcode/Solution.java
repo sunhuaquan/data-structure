@@ -1,9 +1,12 @@
 package com.sun.test.leetcode;
 
-import com.sun.util.MaxHeap;
-import com.sun.util.MinHeap;
-
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Solution {
 
@@ -253,12 +256,13 @@ public class Solution {
     }
 
     public int lengthOfLongestSubstring(String s) {
-
-        int l = 0, r = -1;//滑动窗口[l...r]
+       //滑动窗口[l...r]
+        int l = 0, r = -1;
         int res = 0;
         int[] arr = new int[256];
         while (l < s.length()) {
-            if (r + 1 < s.length() && arr[s.charAt(r + 1)] == 0) { //第r+1个字符不在滑动窗口里面
+            //第r+1个字符不在滑动窗口里面
+            if (r + 1 < s.length() && arr[s.charAt(r + 1)] == 0) {
                 arr[s.charAt(++r)] = 1;
                 res = Math.max(res, r - l + 1);
             } else {//第r+1个字符在滑动窗口里面
@@ -302,7 +306,7 @@ public class Solution {
         int[] nums = new int[]{1};
 
 
-       // System.out.println(obj.sumRange(0, 2));
+        // System.out.println(obj.sumRange(0, 2));
 
 
     }

@@ -1,4 +1,4 @@
-package com.sun.test.leetcode;
+package com.sun.leetcode;
 
 public class NumArray {
 

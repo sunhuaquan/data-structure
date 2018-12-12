@@ -1,7 +1,15 @@
 package com.sun.test;
 
-import com.sun.jmx.snmp.internal.SnmpSubSystem;
-import com.sun.util.graph.*;
+import com.sun.util.graph.Component;
+import com.sun.util.graph.DenseGraph;
+import com.sun.util.graph.Edge;
+import com.sun.util.graph.Graph;
+import com.sun.util.graph.KruskalMST;
+import com.sun.util.graph.LazyPrimMST2;
+import com.sun.util.graph.Path;
+import com.sun.util.graph.PrimMST;
+import com.sun.util.graph.ReadGraph;
+import com.sun.util.graph.ShortestPath;
 
 import java.util.List;
 

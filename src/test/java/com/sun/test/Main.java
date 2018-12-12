@@ -1,15 +1,13 @@
 package com.sun.test;
 
 import com.sun.helper.FileOperation;
-import com.sun.util.ArrayList;
-import com.sun.util.BSTSet;
-import com.sun.util.LinkedListSet;
-import com.sun.util.Set;
+import com.sun.util.*;
 import com.sun.zcy.QueueArray;
 import com.sun.zcy.RandomPool;
 import com.sun.zcy.StackArray;
+import com.sun.zcy.Zcy;
 import org.junit.Test;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 
 public class Main {
 
@@ -100,7 +98,42 @@ public class Main {
             String random = randomPool.getRandom();
             System.out.print(random + " ");
         }
+    }
 
+    @Test
+    public void testPrintMatrixZigZag() {
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+        Zcy.printMatrixZigZag(matrix);
+
+    }
+
+    @Test
+    public void testFindNumInSortedMatrix() {
+
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+        boolean numInSortedMatrix = Zcy.findNumInSortedMatrix(matrix, 20);
+        System.out.print(numInSortedMatrix);
+    }
+
+    @Test
+    public void testIsPalindromeList() {
+
+        Node node = new Node(new int[]{1, 2, 3});
+
+        boolean palindromeList = Zcy.isPalindromeList(node);
+        System.out.println(palindromeList);
+    }
+
+    @Test
+    public void testListPartition2() {
+
+        Node node = new Node(new int[]{45, 1, 2, 3, 12, 45, 32, 56, 43, 76, 43, 65, 32, 45});
+
+        Node node1 = Zcy.listPartition2(node, 45);
+        while (node1 != null) {
+            System.out.print(node1.value + " ");
+            node1 = node1.next;
+        }
 
     }
 }

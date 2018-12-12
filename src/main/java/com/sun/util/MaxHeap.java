@@ -28,7 +28,7 @@ public class MaxHeap<E extends Comparable<E>> {
         return data.size();
     }
 
-    public int parent(int index) {
+    private int parent(int index) {
 
         if (index == 0) {
             throw new IllegalArgumentException("index 0 have not parent");
@@ -36,11 +36,11 @@ public class MaxHeap<E extends Comparable<E>> {
         return (index - 1) / 2;
     }
 
-    public int leftChild(int index) {
+    private int leftChild(int index) {
         return index * 2 + 1;
     }
 
-    public int rightChild(int index) {
+    private int rightChild(int index) {
         return index * 2 + 2;
     }
 
@@ -89,7 +89,9 @@ public class MaxHeap<E extends Comparable<E>> {
      * @param e
      */
     private void siftDown(int k, E e) {
-        if (data.isEmpty()) return;
+        if (data.isEmpty()) {
+            return;
+        }
         //有子节点的情况
         while (leftChild(k) < data.size()) {
             //j等于子节点中最大的

@@ -27,7 +27,7 @@ public class MinHeap<E extends Comparable<E>> {
         siftUp(data.size() - 1, e);
     }
 
-    public int parent(int index) {
+    private int parent(int index) {
 
         if (index == 0) {
             throw new IllegalArgumentException("index is not illegal");
@@ -35,15 +35,15 @@ public class MinHeap<E extends Comparable<E>> {
         return (index - 1) / 2;
     }
 
-    public int leftChild(int index) {
+    private int leftChild(int index) {
         return 2 * index + 1;
     }
 
-    public int rightChild(int index) {
+    private int rightChild(int index) {
         return 2 * index + 2;
     }
 
-    public void siftUp(int index, E e) {
+    private void siftUp(int index, E e) {
         while (index > 0 && data.get(parent(index)).compareTo(e) > 0) {
             data.set(index, data.get(parent(index)));
             index = parent(index);
@@ -52,7 +52,7 @@ public class MinHeap<E extends Comparable<E>> {
     }
 
     /**
-     * 取出对顶元素
+     * 取出堆顶元素
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class MinHeap<E extends Comparable<E>> {
         return front;
     }
 
-    public void siftDown(int index, E e) {
+    private void siftDown(int index, E e) {
         if (data.isEmpty()) {
             return;
         }

@@ -1,39 +1,41 @@
 package com.sun.data;
 
-public class TreeNode {
+public class TreeNode<T> {
 
-    private int val;
+    public T val;
 
-    private TreeNode left;
+    public TreeNode<T> left;
 
-    private TreeNode right;
+    public TreeNode<T> right;
+
+    public TreeNode<T> parent;
 
 
-    public TreeNode(int val) {
+    public TreeNode(T val) {
         this.val = val;
     }
 
-    public int getVal() {
+    public T getVal() {
         return val;
     }
 
-    public void setVal(int val) {
+    public void setVal(T val) {
         this.val = val;
     }
 
-    public TreeNode getLeft() {
+    public TreeNode<T> getLeft() {
         return left;
     }
 
-    public void setLeft(TreeNode left) {
+    public void setLeft(TreeNode<T> left) {
         this.left = left;
     }
 
-    public TreeNode getRight() {
+    public TreeNode<T> getRight() {
         return right;
     }
 
-    public void setRight(TreeNode right) {
+    public void setRight(TreeNode<T> right) {
         this.right = right;
     }
 

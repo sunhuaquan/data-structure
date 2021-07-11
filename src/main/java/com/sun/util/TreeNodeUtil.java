@@ -12,7 +12,7 @@ public class TreeNodeUtil {
         return result;
     }
 
-    private static void getTreeByPre(List<Integer> list,TreeNode treeNode){
+    private static void getTreeByPre(List<Integer> list,TreeNode<Integer> treeNode){
 
          while (treeNode==null){
              return;

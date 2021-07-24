@@ -65,25 +65,25 @@ public class Zcy {
         return false;
     }
 
-    public static boolean isPalindromeList(Node node) {
+    public static boolean isPalindromeList(Node<Integer> node) {
 
         Stack<Integer> stack = new Stack<Integer>();
-        Node head = node;
+        Node<Integer> head = node;
         while (head != null) {
-            stack.push(head.value);
-            head = head.next;
+            stack.push(head.getValue());
+            head = head.getNext();
         }
         head = node;
         while (head != null) {
-            if (stack.pop() != head.value) {
+            if (stack.pop() != head.getValue()) {
                 return false;
             }
-            head = head.next;
+            head = head.getNext();
         }
         return true;
     }
 
-    public static Node listPartition2(Node head, int pivot) {
+    public static Node listPartition2(Node<Integer> head, int pivot) {
         Node sH = null; // small head
         Node sT = null; // small tail
         Node eH = null; // equal head
@@ -93,22 +93,21 @@ public class Zcy {
         Node next = null; // save next node
         // every node distributed to three lists
         while (head != null) {
-            next = head.next;
-            head.next = null;
-            if (head.value < pivot) {
+            next = head.getNext();
+            if (head.getValue() < pivot) {
                 if (sH == null) {
                     sH = head;
                     sT = head;
                 } else {
-                    sT.next = head;
+                    sT.setNext(head);
                     sT = head;
                 }
-            } else if (head.value == pivot) {
+            } else if (head.getValue() == pivot) {
                 if (eH == null) {
                     eH = head;
                     eT = head;
                 } else {
-                    eT.next = head;
+                    eT.setNext(head);
                     eT = head;
                 }
             } else {
@@ -116,7 +115,7 @@ public class Zcy {
                     bH = head;
                     bT = head;
                 } else {
-                    bT.next = head;
+                    bT.setNext(head);
                     bT = head;
                 }
             }
@@ -124,12 +123,12 @@ public class Zcy {
         }
         // small and equal reconnect
         if (sT != null) {
-            sT.next = eH;
+            sT.setNext(eH);
             eT = eT == null ? sT : eT;
         }
         // all reconnect
         if (eT != null) {
-            eT.next = bH;
+            eT.setNext(bH);
         }
         return sH != null ? sH : eH != null ? eH : bH;
     }

@@ -7,49 +7,46 @@ package com.sun.util;
  * @Description: TODO
  * @date 2018/12/810:04
  */
-public class Node {
+public class Node<E> {
 
-    public int value;
-    public Node next;
+    private E value;
+    private Node next;
 
     public Node() {
 
     }
 
-    public Node(int value) {
-        this(value, null);
+    public Node(E value) {
+        this.value = value;
     }
 
-    public Node(int value, Node next) {
+    public E getValue() {
+        return value;
+    }
+
+    public void setValue(E value) {
         this.value = value;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
         this.next = next;
     }
 
-    public Node(int[] arr) {
-       /* if (arr != null && arr.length > 0) {
-            this.value = arr[0];
+    @Override
+    public String toString() {
+
+        StringBuilder sb=new StringBuilder();
+        Node<E> node=this;
+        while (node!=null){
+
+            sb.append(node.getValue()).append("->");
+
+            node=node.getNext();
         }
-        Node prv = this;
-        for (int i = 1; i < arr.length; i++) {
-            Node curr = new Node(arr[i]);
-            prv.next = curr;
-            prv = prv.next;
-        }*/
-        if (arr == null || arr.length == 0) {
-            throw new RuntimeException("arr is empty");
-        }
-        this.value = arr[0];
-        this.next = builderFrom(arr, 1);
+        return sb.toString();
     }
-
-    private Node builderFrom(int[] arr, int i) {
-
-        if (i >= arr.length) {
-            return null;
-        }
-        Node node = new Node(arr[i]);
-        node.next = builderFrom(arr, i + 1);
-        return node;
-    }
-
 }

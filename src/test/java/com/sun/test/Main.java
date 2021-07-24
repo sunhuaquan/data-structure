@@ -131,8 +131,8 @@ public class Main {
 
         Node node1 = Zcy.listPartition2(node, 45);
         while (node1 != null) {
-            System.out.print(node1.value + " ");
-            node1 = node1.next;
+            System.out.print(node1.getValue() + " ");
+            node1 = node1.getNext();
         }
 
     }

@@ -24,6 +24,7 @@ public class Interview17 {
     private static boolean increment(char[] number){
 
 
+
         return true;
     }
     public static void printNumber(char[] number){

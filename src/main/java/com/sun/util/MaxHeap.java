@@ -2,7 +2,7 @@ package com.sun.util;
 
 public class MaxHeap<E extends Comparable<E>> {
 
-    private ArrayList<E> data;
+    private List<E> data;
 
     public MaxHeap(int capacity) {
         data = new ArrayList<>(capacity);
@@ -60,6 +60,10 @@ public class MaxHeap<E extends Comparable<E>> {
             k = parent(k);
         }
         data.set(k, e);
+    }
+
+    public List<E> getData() {
+        return data;
     }
 
     /**

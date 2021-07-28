@@ -1,60 +1,43 @@
 package com.sun.algorithm;
 
 
-import com.sun.data.TreeNode;
-
 public class Interview56 {
 
 
     public static void main(String[] args) {
 
-        TreeNode<Integer> one = new TreeNode<>(1);
-        TreeNode<Integer> two = new TreeNode<>(2);
-        TreeNode<Integer> three = new TreeNode<>(3);
-        TreeNode<Integer> four = new TreeNode<>(4);
-        TreeNode<Integer> five = new TreeNode<>(5);
-        TreeNode<Integer> six = new TreeNode<>(6);
-        TreeNode<Integer> seven = new TreeNode<>(7);
-
-        one.setLeft(two);
-        one.setRight(three);
-
-        two.setLeft(four);
-        two.setRight(five);
-
-        //three.setRight(six);
-
-        five.setLeft(seven);
-
-        boolean isBalanced = isBalanced(one);
-        System.out.println(isBalanced);
-    }
-
-    public static boolean isBalanced(TreeNode<Integer> head) {
-
-        if (head == null) {
-            return true;
+        int[] numsAppearOnce = findNumsAppearOnce(new int[]{2,4,3,6,3,2,5,5});
+        for (int i = 0; i < numsAppearOnce.length; i++) {
+            System.out.println(numsAppearOnce[i]);
         }
-        int left = treeDeep(head.getLeft());
-        int right = treeDeep(head.getRight());
-        int diff = left - right;
-        if (diff > 1 || diff < -1) {
-            return false;
-        }
-        return isBalanced(head.getLeft()) && isBalanced(head.getRight());
     }
 
 
-    public static int treeDeep(TreeNode<Integer> head) {
+    public static int[] findNumsAppearOnce(int[] data) {
 
-        if (head == null) {
-            return 0;
+        if (data == null || data.length == 0) {
+            return null;
         }
-        int left = treeDeep(head.getLeft());
-        int right = treeDeep(head.getRight());
-        return left > right ? left + 1 : right + 1;
-
+        int sum = 0;
+        for (int i = 0; i < data.length; i++) {
+            sum = sum ^ data[i];
+        }
+        //获取sum的第一位1;
+        int one = 1;
+        int count = 0;
+        while ((sum & one) != 1) {
+            sum = sum >> 1;
+            count++;
+        }
+        //将index位按 0和1 分为两组
+        int[] result = new int[]{0,0};
+        for(int i=0;i< data.length;i++){
+            if (((data[i] >> count) & one) == 0) {
+                result[0]^=data[i];
+            }else {
+                result[1]^=data[i];
+            }
+        }
+        return result;
     }
-
-
 }

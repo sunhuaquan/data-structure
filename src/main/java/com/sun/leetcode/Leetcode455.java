@@ -12,23 +12,20 @@ public class Leetcode455 {
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);
-        int minIndex = 0;
-        int result = 0;
-        for (int i = 0; i < g.length; i++) {
-            for (int j = minIndex; j < s.length; j++) {
-                if (s[j] >= g[i]) {
-                    result++;
-                    minIndex = j+1;
-                    break;
-                }
+        int child = 0;
+        int cookie = 0;
+        while (child < g.length && cookie < s.length) {
+            if (s[cookie] >= g[child]) {
+                child++;
             }
+            cookie++;
         }
-        return result;
+        return child;
     }
 
     public static void main(String[] args) {
 
-        int contentChildren = new Leetcode455().findContentChildren(new int[]{1, 2,}, new int[]{1, 2,3});
+        int contentChildren = new Leetcode455().findContentChildren(new int[]{1, 2,}, new int[]{1, 2, 3});
         System.out.println(contentChildren);
     }
 }

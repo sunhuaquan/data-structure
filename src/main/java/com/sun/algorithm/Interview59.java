@@ -8,6 +8,7 @@ public class Interview59 {
 
     public static void main(String[] args) {
 
+        System.out.println(null==null);
         List<Integer> integers = maxInWindows(new int[]{2, 3, 4, 2, 6, 2, 5, 1}, 3);
         System.out.println(integers);
 

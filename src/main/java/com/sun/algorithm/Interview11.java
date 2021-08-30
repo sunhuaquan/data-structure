@@ -6,7 +6,7 @@ public class Interview11 {
     public static void main(String[] args) {
 
 
-        int[] num=new int[]{1,1,1,0,1};
+        int[] num=new int[]{1,2,2,2,2,2};
         System.out.println(getMin(num));
     }
 
@@ -20,7 +20,11 @@ public class Interview11 {
                 return nums[p2];
             }
             int mid=(p1+p2)/2;
+            if(nums[p2]==nums[mid]){
+                return nums[p1];
+            }
             if(nums[p1]==nums[p2]&&nums[p1]==nums[mid]){
+                System.out.println(p1+" "+p2);
                  return order(nums,p1,p2);
             }
             if(nums[mid]>=nums[p1]){
@@ -31,7 +35,6 @@ public class Interview11 {
         }
         return -1;
     }
-
     public static int order(int[] nums,int begin,int end){
         int mid=nums[begin];
         for(int i=begin+1;i<end;i++){

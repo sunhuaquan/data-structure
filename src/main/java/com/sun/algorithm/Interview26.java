@@ -41,7 +41,7 @@ public class Interview26 {
         boolean result = false;
         if(treeNode1!=null&&treeNode2!=null){
 
-            if(treeNode1.getVal()==treeNode2.getVal());{
+            if(treeNode1.getVal()==treeNode2.getVal()){
                 result=doesTree1HaveTrees(treeNode1,treeNode2);
             }
             if(!result){
@@ -56,12 +56,14 @@ public class Interview26 {
     }
 
     private static boolean doesTree1HaveTrees(TreeNode<Integer> treeNode1, TreeNode<Integer> treeNode2) {
+
         if(treeNode2==null){
             return true;
         }
         if(treeNode1==null){
             return false;
         }
+        System.out.println(treeNode1.getVal()+" "+treeNode2.getVal());
         if(treeNode1.getVal()!=treeNode2.getVal()){
             return false;
         }

@@ -2,6 +2,8 @@ package com.sun.algorithm;
 
 import com.sun.data.Node;
 
+import java.util.Stack;
+
 public class Interview6 {
 
 
@@ -18,6 +20,7 @@ public class Interview6 {
         node4.setNext(node5);
         System.out.println(head);
         printListReverse(head);
+
     }
 
     public static void printListReverse(Node head){
